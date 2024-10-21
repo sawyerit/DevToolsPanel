@@ -5,6 +5,10 @@ import { AuthInfoContext } from "../components/appcontext";
 import Tabs from "./components/Tabs";
 import SettingsPanel from "./components/SettingsPanel";
 import "./Panel.css";
+import Tab1 from "./components/Tab1";
+import Tab2 from "./components/Tab2";
+import TabContent from "./components/TabContent";
+import StatusBar from "./components/StatusBar";
 
 const Panel: FC = (): JSX.Element => {
   const [authInfo, setAuthInfo] = useState<JWTPayload | null>(null);
@@ -60,10 +64,13 @@ const Panel: FC = (): JSX.Element => {
         </div>
         <div className="main-content">
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
-          <div className="tab-content">
-            {activeTab === 0 && <div>Content for Tab 1</div>}
-            {activeTab === 1 && <div>Content for Tab 2</div>}
-          </div>
+          <TabContent id={0} activeTab={activeTab}>
+            <Tab1 />
+          </TabContent>
+          <TabContent id={1} activeTab={activeTab}>
+            <Tab2 />
+          </TabContent>
+          <StatusBar message="status message here" />
         </div>
       </AuthInfoContext.Provider>
     </div>
