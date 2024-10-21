@@ -1,7 +1,3 @@
-Below is a sample README file for the project, summarizing how to set up, build, and understand the structure of a Chrome DevTools extension built with React and TypeScript.
-
----
-
 # DevTools Panel Extension
 
 ## Overview
