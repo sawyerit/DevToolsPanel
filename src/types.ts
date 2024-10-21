@@ -11,3 +11,7 @@ export type JWTPayload = {
   permissions?: string[];
   iss: string;
 };
+
+export interface TabProps {
+  setStatusMessage: (message: string) => void;
+}

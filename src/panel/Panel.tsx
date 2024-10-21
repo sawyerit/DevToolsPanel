@@ -14,6 +14,7 @@ const Panel: FC = (): JSX.Element => {
   const [authInfo, setAuthInfo] = useState<JWTPayload | null>(null);
   const [activeTab, setActiveTab] = useState(0);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
 
   /**
    Get current cookie data and saves auth in context provider
@@ -65,12 +66,12 @@ const Panel: FC = (): JSX.Element => {
         <div className="main-content">
           <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
           <TabContent id={0} activeTab={activeTab}>
-            <Tab1 />
+            <Tab1 setStatusMessage={setStatusMessage} />
           </TabContent>
           <TabContent id={1} activeTab={activeTab}>
-            <Tab2 />
+            <Tab2 setStatusMessage={setStatusMessage} />
           </TabContent>
-          <StatusBar message="status message here" />
+          <StatusBar message={statusMessage} />
         </div>
       </AuthInfoContext.Provider>
     </div>
