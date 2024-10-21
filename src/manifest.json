@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "A Chrome DevTools extension using React and TypeScript",
     "devtools_page": "devtools.html",
-    "host_permissions": ["*://*.<domain>.com/*", "*://*.<domain>pilot.com/*"],
+    "host_permissions": ["*://*/*"],
     "permissions": [
       "activeTab",
       "tabs",

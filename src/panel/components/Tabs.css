@@ -1,0 +1,15 @@
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tabs button {
+    padding: 5px 10px 5px 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .tabs button.active {
+    border-bottom: 2px solid #007bff;
+  }

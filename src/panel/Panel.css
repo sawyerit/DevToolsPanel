@@ -1,0 +1,42 @@
+.panel {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .settings-container {
+    position: relative;
+    transition: width 0.3s ease;
+    width: 50px;
+  }
+  
+  .settings-container.open {
+    width: 250px;
+  }
+  
+  .settings-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .settings-container.open + .main-content {
+    margin-left: -200px;
+  }
+  
+  .tab-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
