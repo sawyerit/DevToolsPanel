@@ -15,7 +15,7 @@
 .settings_hidden {
     opacity: 0;
     visibility: hidden !important;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 .settings_visible {
@@ -25,7 +25,7 @@
 }
 
 #settings-content {
-    padding: 20px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     box-sizing: border-box;
     background-color: greenyellow;
 }
